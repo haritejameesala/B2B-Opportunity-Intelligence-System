@@ -1,0 +1,128 @@
+{
+  "name": "Brandhero",
+  "description": "Brandhero is a design agency that specializes in UI/UX design, branding, and product design. They provide services such as UX research, design strategy, and development to help businesses create digital products that drive meaningful impact.",
+  "capabilities": [
+    {
+      "name": "UI/UX Design",
+      "description": "Brandhero offers UI/UX design services that include user experience research, design strategy, and development. They help businesses create digital products that are user-friendly, visually appealing, and effective in driving business outcomes."
+    },
+    {
+      "name": "Branding",
+      "description": "Brandhero provides branding services that include brand identity design, visual design, and tone of voice development. They help businesses create a strong brand identity that resonates with their target audience and drives business growth."
+    },
+    {
+      "name": "Product Design",
+      "description": "Brandhero offers product design services that include product strategy, design research, and development. They help businesses create digital products that are innovative, user-friendly, and effective in driving business outcomes."
+    },
+    {
+      "name": "UX Research",
+      "description": "Brandhero provides UX research services that include user experience research, usability testing, and user interviews. They help businesses understand their users' needs and behaviors, and create digital products that meet those needs."
+    },
+    {
+      "name": "Design Strategy",
+      "description": "Brandhero offers design strategy services that include design strategy development, design visioning, and design roadmap creation. They help businesses create a design strategy that aligns with their business goals and drives business outcomes."
+    },
+    {
+      "name": "Development",
+      "description": "Brandhero provides development services that include front-end development, back-end development, and full-stack development. They help businesses bring their digital products to life and ensure they are scalable and maintainable."
+    },
+    {
+      "name": "Agile UX",
+      "description": "Brandhero offers Agile UX services that include iterative design, user feedback, and continuous improvement. They help businesses create digital products that are user-friendly, visually appealing, and effective in driving business outcomes."
+    },
+    {
+      "name": "Accessibility Compliance",
+      "description": "Brandhero provides accessibility compliance services that include accessibility testing, accessibility auditing, and accessibility remediation. They help businesses ensure their digital products are accessible to all users, including those with disabilities."
+    },
+    {
+      "name": "Behavioral Analytics",
+      "description": "Brandhero offers behavioral analytics services that include user behavior analysis, user journey mapping, and user experience optimization. They help businesses understand their users' behavior and create digital products that meet their needs."
+    },
+    {
+      "name": "Design Trends",
+      "description": "Brandhero provides design trend analysis services that include design trend research, design trend forecasting, and design trend implementation. They help businesses stay up-to-date with the latest design trends and create digital products that are innovative and effective."
+    },
+    {
+      "name": "Design Portfolio",
+      "description": "Brandhero offers design portfolio services that include design portfolio development, design portfolio optimization, and design portfolio maintenance. They help businesses create a strong design portfolio that showcases their design capabilities and drives business growth."
+    }
+  ],
+  "services": [
+    {
+      "name": "Discovery Call",
+      "description": "Brandhero offers a discovery call service that includes a 15-minute call to discuss business goals, design challenges, and design opportunities. They help businesses understand their design needs and create a design strategy that aligns with their business goals."
+    },
+    {
+      "name": "Design Services",
+      "description": "Brandhero provides design services that include UI/UX design, branding, product design, UX research, design strategy, and development. They help businesses create digital products that are user-friendly, visually appealing, and effective in driving business outcomes."
+    },
+    {
+      "name": "Development Services",
+      "description": "Brandhero offers development services that include front-end development, back-end development, and full-stack development. They help businesses bring their digital products to life and ensure they are scalable and maintainable."
+    },
+    {
+      "name": "Agile UX Services",
+      "description": "Brandhero provides Agile UX services that include iterative design, user feedback, and continuous improvement. They help businesses create digital products that are user-friendly, visually appealing, and effective in driving business outcomes."
+    },
+    {
+      "name": "Accessibility Compliance Services",
+      "description": "Brandhero offers accessibility compliance services that include accessibility testing, accessibility auditing, and accessibility remediation. They help businesses ensure their digital products are accessible to all users, including those with disabilities."
+    },
+    {
+      "name": "Behavioral Analytics Services",
+      "description": "Brandhero provides behavioral analytics services that include user behavior analysis, user journey mapping, and user experience optimization. They help businesses understand their users' behavior and create digital products that meet their needs."
+    },
+    {
+      "name": "Design Trend Analysis Services",
+      "description": "Brandhero offers design trend analysis services that include design trend research, design trend forecasting, and design trend implementation. They help businesses stay up-to-date with the latest design trends and create digital products that are innovative and effective."
+    },
+    {
+      "name": "Design Portfolio Services",
+      "description": "Brandhero provides design portfolio services that include design portfolio development, design portfolio optimization, and design portfolio maintenance. They help businesses create a strong design portfolio that showcases their design capabilities and drives business growth."
+    }
+  ],
+  "industries": [
+    {
+      "name": "Technology",
+      "description": "Brandhero works with technology companies to create digital products that drive business outcomes."
+    },
+    {
+      "name": "Finance",
+      "description": "Brandhero provides design services to finance companies to create digital products that meet their users' needs."
+    },
+    {
+      "name": "Healthcare",
+      "description": "Brandhero works with healthcare companies to create digital products that improve patient outcomes and drive business growth."
+    },
+    {
+      "name": "E-commerce",
+      "description": "Brandhero provides design services to e-commerce companies to create digital products that drive sales and revenue growth."
+    },
+    {
+      "name": "Non-profit",
+      "description": "Brandhero works with non-profit organizations to create digital products that drive social impact and business growth."
+    }
+  ],
+  "tools": [
+    {
+      "name": "Figma",
+      "description": "Brandhero uses Figma for UI/UX design, collaboration, and prototyping."
+    },
+    {
+      "name": "Sketch",
+      "description": "Brandhero uses Sketch for UI/UX design, collaboration, and prototyping."
+    },
+    {
+      "name": "Adobe XD",
+      "description": "Brandhero uses Adobe XD for UI/UX design, collaboration, and prototyping."
+    },
+    {
+      "name": "InVision",
+      "description": "Brandhero uses InVision for design collaboration, prototyping, and testing."
+    },
+    {
+      "name": "Miro",
+      "description": "Brandhero uses Miro for design collaboration, brainstorming, and ideation."
+    }
+  ]
+}
