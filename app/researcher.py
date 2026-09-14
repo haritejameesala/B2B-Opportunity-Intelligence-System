@@ -697,8 +697,11 @@ class Researcher:
             for record in records:
                 print(f"  - source_type: {record['source_type']}")
                 print(f"    url: {record['source_url']}")
-                print(f"    claim: {record['claim']}")
-                print(f"    snippet: {record['snippet']}")
+                # Safely encode claim and snippet to avoid UnicodeEncodeError on Windows console
+                safe_claim = str(record.get('claim', '')).encode('ascii', errors='replace').decode('ascii')
+                safe_snippet = str(record.get('snippet', '')).encode('ascii', errors='replace').decode('ascii')
+                print(f"    claim: {safe_claim}")
+                print(f"    snippet: {safe_snippet}")
 
     # ============================================================
     # BUSINESS SIGNAL SEARCH

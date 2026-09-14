@@ -5,7 +5,6 @@ import {
   ExternalLink,
   CheckCircle2,
   XCircle,
-  TrendingUp,
   Target,
   UserCheck,
   Clock,
@@ -293,14 +292,25 @@ export default function App() {
                   {result.opportunity?.likely_brandhero_need ? (
                     <div className="flex items-center gap-2.5 text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-2.5 rounded-xl">
                       <CheckCircle2 className="w-5 h-5 shrink-0" />
-                      <span className="font-semibold text-sm">YES — High Opportunity</span>
+                      <span className="font-semibold text-sm">
+                        YES — {result.opportunity?.opportunity_tier || 'Qualified Opportunity'}
+                      </span>
                     </div>
                   ) : (
                     <div className="flex items-center gap-2.5 text-slate-400 bg-slate-800/60 border border-slate-700/60 px-3.5 py-2.5 rounded-xl">
                       <XCircle className="w-5 h-5 shrink-0" />
-                      <span className="font-medium text-sm">NO — Low Evidence Match</span>
+                      <span className="font-medium text-sm">
+                        NO — {result.opportunity?.opportunity_tier || 'No Opportunity'}
+                      </span>
                     </div>
                   )}
+                </div>
+
+                <div className="text-xs text-slate-400">
+                  Evidence-based Opportunity Tier:{' '}
+                  <span className="font-medium text-slate-200">
+                    {result.opportunity?.opportunity_tier || 'No Opportunity'}
+                  </span>
                 </div>
 
                 <div className="text-xs text-slate-400">

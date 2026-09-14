@@ -87,17 +87,31 @@ class OpportunityAPIHandler(BaseHTTPRequestHandler):
                 signal_result = signal_analyzer.analyze(research_data, brandhero_profile)
                 score_result = scorer.calculate(signal_result)
 
+                evidence_pages = []
+                seen_urls = set()
+                for records in research_data.get("signal_evidence", {}).values():
+                    if not isinstance(records, list):
+                        continue
+                    for record in records:
+                        if not isinstance(record, dict):
+                            continue
+                        url = record.get("source_url", "")
+                        if not url or url in seen_urls:
+                            continue
+                        seen_urls.add(url)
+                        evidence_pages.append({
+                            "title": record.get("claim", ""),
+                            "url": url,
+                        })
+
                 response_data = {
                     "company_name": research_data.get("company_name", company_name or domain),
                     "domain": domain,
                     "website": research_data.get("website", ""),
                     "evidence_summary": {
-                        "pages_count": len(research_data.get("pages", [])),
-                        "news_count": len(research_data.get("news", {})) if isinstance(research_data.get("news"), dict) else len(research_data.get("news", [])),
-                        "pages": [
-                            {"title": p.get("title", ""), "url": p.get("url", "")}
-                            for p in research_data.get("pages", [])
-                        ],
+                        "pages_count": len(evidence_pages),
+                        "news_count": 0,
+                        "pages": evidence_pages,
                     },
                     "signals": signal_result.get("signals", {}),
                     "opportunity": signal_result.get("opportunity", {}),

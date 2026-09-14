@@ -896,6 +896,31 @@ Return ONLY the JSON object.
         return False, supported
 
     @staticmethod
+    def _opportunity_tier(supporting_signals):
+        """Classify evidence strength independently from the weighted score."""
+        if not supporting_signals:
+            return "No Opportunity"
+
+        high_impact = {
+            "rebrand_or_positioning",
+            "website_change",
+            "observable_experience_problem",
+        }
+
+        if len(supporting_signals) >= 2:
+            return "Very High"
+
+        signal_name, _, confidence, relevance = supporting_signals[0]
+        if (
+            signal_name in high_impact
+            and confidence >= 0.75
+            and relevance >= 0.75
+        ):
+            return "High"
+
+        return "Qualified"
+
+    @staticmethod
     def constrain_to_signal_evidence(result, company_evidence):
         """Keep model citations tied to the collector's matching signal.
 
@@ -1195,6 +1220,7 @@ Return ONLY the JSON object.
 
         opportunity_supported, supporting_signals = self._is_opportunity_supported(signals)
         likely_need = opportunity_supported
+        opportunity_tier = self._opportunity_tier(supporting_signals)
 
         if opportunity_supported:
             strongest_name, strongest_signal, confidence, _ = max(
@@ -1222,6 +1248,7 @@ Return ONLY the JSON object.
                 "relevant_stakeholder": "",
                 "why_now": "",
                 "personalized_outreach_angle": "",
+                "opportunity_tier": "No Opportunity",
             }
 
         # Cannot have an opportunity without
@@ -1235,6 +1262,7 @@ Return ONLY the JSON object.
                 "relevant_stakeholder": "",
                 "why_now": "",
                 "personalized_outreach_angle": "",
+                "opportunity_tier": "No Opportunity",
             }
 
         else:
@@ -1263,6 +1291,10 @@ Return ONLY the JSON object.
             opportunity["likely_brandhero_need"] = (
                 likely_need
             )
+
+            opportunity["opportunity_tier"] = opportunity_tier
+            if not likely_need:
+                opportunity["opportunity_tier"] = "No Opportunity"
 
             opportunity["confidence"] = round(
                 opportunity_confidence,

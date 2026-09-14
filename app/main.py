@@ -313,6 +313,14 @@ def print_opportunity(result):
         )
     )
 
+    print(
+        "Evidence-based Opportunity Tier: "
+        + opportunity.get(
+            "opportunity_tier",
+            "No Opportunity"
+        )
+    )
+
     confidence = opportunity.get(
         "confidence",
         0
@@ -598,6 +606,11 @@ def main():
     print(
         f"Opportunity Tier: "
         f"{score_result.get('tier', 'Very Low')}"
+    )
+
+    print(
+        "Note: Score Tier is the raw weighted score; "
+        "Evidence-based Opportunity Tier is reported separately."
     )
 
     opportunity = signal_result.get(
